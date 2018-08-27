@@ -154,6 +154,7 @@ import org.jooq.meta.postgres.PostgresDatabase;
 import org.jooq.tools.JooqLogger;
 import org.jooq.tools.StopWatch;
 import org.jooq.tools.StringUtils;
+
 // ...
 // ...
 
@@ -3997,6 +3998,7 @@ public class JavaGenerator extends AbstractGenerator {
 
             // The remaining unique keys
             List<UniqueKeyDefinition> uniqueKeys = table.getUniqueKeys();
+            uniqueKeys = new ArrayList<>();
             if (uniqueKeys.size() > 0) {
                 if (generateGlobalKeyReferences()) {
                     final List<String> keyFullIds = out.ref(getStrategy().getFullJavaIdentifiers(uniqueKeys), 2);
