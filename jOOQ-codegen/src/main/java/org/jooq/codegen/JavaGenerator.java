@@ -764,6 +764,7 @@ public class JavaGenerator extends AbstractGenerator {
         out.tab(1).header("UNIQUE and PRIMARY KEY definitions");
         out.println();
 
+/*
         for (TableDefinition table : database.getTables(schema)) {
             try {
                 List<UniqueKeyDefinition> uniqueKeys = table.getUniqueKeys();
@@ -787,6 +788,7 @@ public class JavaGenerator extends AbstractGenerator {
                 log.error("Error while generating table " + table, e);
             }
         }
+*/
 
         // Foreign keys
         out.tab(1).header("FOREIGN KEY definitions");
